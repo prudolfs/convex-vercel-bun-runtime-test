@@ -1,0 +1,11 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"noEmit": true,
+		"lib": ["ESNext"],
+		"types": ["bun"],
+		"module": "Preserve",
+		"moduleResolution": "bundler"
+	},
+	"include": ["src"]
+}

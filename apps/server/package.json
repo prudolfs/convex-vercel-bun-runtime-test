@@ -1,0 +1,19 @@
+{
+	"name": "@convex-vercel-bun-runtime-test/server",
+	"private": true,
+	"type": "module",
+	"module": "src/index.ts",
+	"scripts": {
+		"dev": "bun --watch src/index.ts",
+		"start": "bun src/index.ts",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@convex-vercel-bun-runtime-test/convex": "workspace:*",
+		"convex": "1.42.2-alpha.0",
+		"elysia": "^1.3.23"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	}
+}

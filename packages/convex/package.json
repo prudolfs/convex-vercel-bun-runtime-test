@@ -1,0 +1,31 @@
+{
+	"name": "@convex-vercel-bun-runtime-test/convex",
+	"type": "module",
+	"main": "./convex/_generated/api.js",
+	"exports": {
+		"./api": {
+			"types": "./convex/_generated/api.d.ts",
+			"default": "./convex/_generated/api.js"
+		},
+		"./server": {
+			"types": "./convex/_generated/server.d.ts",
+			"default": "./convex/_generated/server.js"
+		},
+		"./dataModel": {
+			"types": "./convex/_generated/dataModel.d.ts"
+		}
+	},
+	"scripts": {
+		"dev": "convex dev",
+		"deploy": "convex deploy",
+		"typecheck": "tsc --noEmit -p convex/tsconfig.json"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"convex": "1.42.2-alpha.0"
+	},
+	"peerDependencies": {
+		"react": "^19.2.0",
+		"typescript": "^7"
+	}
+}

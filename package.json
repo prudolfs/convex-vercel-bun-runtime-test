@@ -1,0 +1,24 @@
+{
+	"name": "@convex-vercel-bun-runtime-test/root",
+	"private": true,
+	"type": "module",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"devDependencies": {
+		"@biomejs/biome": "2.5.3",
+		"@types/bun": "latest",
+		"typescript": "^7.0.2"
+	},
+	"scripts": {
+		"dev": "bun run --filter '*' --parallel dev",
+		"build": "bun run --filter '*' build",
+		"typecheck": "bun run --filter '*' --parallel typecheck",
+		"lint": "biome lint",
+		"format": "biome format --write",
+		"check": "biome check --write --unsafe",
+		"convex:dev": "bun --cwd packages/convex run convex dev",
+		"convex:deploy": "bun --cwd packages/convex run convex deploy"
+	}
+}
