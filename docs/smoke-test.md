@@ -141,7 +141,7 @@ messages
 
 ---
 
-# Phase 3 — Backend (Elysia)
+# Phase 3 — Backend (Elysia) ✅ DONE
 
 ## Objectives
 

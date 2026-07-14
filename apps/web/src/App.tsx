@@ -6,5 +6,5 @@ export default function App() {
 				<p className="text-muted-foreground text-sm">Convex + Bun + Elysia + Vercel</p>
 			</main>
 		</div>
-	);
+	)
 }
