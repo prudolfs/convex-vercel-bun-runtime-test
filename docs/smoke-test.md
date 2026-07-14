@@ -103,7 +103,7 @@ Create the minimal project structure.
 
 ---
 
-# Phase 2 — Convex Package
+# Phase 2 — Convex Package ✅ DONE
 
 ## Objectives
 
