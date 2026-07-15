@@ -2,7 +2,12 @@
 	"name": "@convex-vercel-bun-runtime-test/server",
 	"private": true,
 	"type": "module",
-	"module": "src/index.ts",
+	"exports": {
+		".": {
+			"types": "./src/app.ts",
+			"default": "./src/app.ts"
+		}
+	},
 	"scripts": {
 		"dev": "bun --watch src/index.ts",
 		"start": "bun src/index.ts",

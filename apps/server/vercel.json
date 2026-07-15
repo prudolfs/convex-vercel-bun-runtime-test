@@ -1,0 +1,11 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"installCommand": "cd ../.. && bun install",
+	"buildCommand": "true",
+	"functions": {
+		"src/app.ts": {
+			"runtime": "@vercel/bun@latest"
+		}
+	},
+	"rewrites": [{ "source": "/(.*)", "destination": "/src/app.ts" }]
+}
