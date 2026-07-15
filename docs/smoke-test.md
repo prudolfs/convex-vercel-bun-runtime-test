@@ -304,7 +304,7 @@ React refreshes messages
 
 ---
 
-# Phase 6 — Deployment
+# Phase 6 — Deployment ✅ DONE
 
 ## Objectives
 
@@ -320,24 +320,24 @@ The deployment must exercise the original failure path.
 
 ### Verify
 
-- build succeeds
-- deployment succeeds
-- cold start succeeds
-- health endpoint works
-- chat endpoint works
-- no module linking errors
+- ✅ build succeeds
+- ✅ deployment succeeds
+- ✅ cold start succeeds
+- ✅ health endpoint works
+- ✅ chat endpoint works
+- ✅ no module linking errors
 
 ---
 
-# Phase 7 — Regression Testing
+# Phase 7 — Regression Testing ✅ DONE
 
 ## Local
 
 Verify
 
-- project starts
-- chat works
-- Convex works
+- ✅ project starts
+- ✅ chat works
+- ✅ Convex works
 
 ---
 
@@ -347,11 +347,11 @@ Deploy.
 
 Test
 
-- first request after deployment
-- second request
-- multiple sequential requests
-- page refresh
-- multiple chat messages
+- ✅ first request after deployment
+- ✅ second request
+- ✅ multiple sequential requests
+- ✅ page refresh
+- ✅ multiple chat messages
 
 ---
 
@@ -359,11 +359,11 @@ Test
 
 The regression is considered **not fixed** if any of the following occur:
 
-- `Requested module is not instantiated yet`
-- module linking failures
-- runtime crashes before handler execution
-- Bun exits before request handling
-- Convex import failures
+- `Requested module is not instantiated yet` — **not observed**
+- module linking failures — **not observed**
+- runtime crashes before handler execution — **not observed**
+- Bun exits before request handling — **not observed**
+- Convex import failures — **not observed**
 
 ---
 
