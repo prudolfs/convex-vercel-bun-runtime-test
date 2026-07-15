@@ -23,13 +23,13 @@ async function withClient<T>(fn: (client: ConvexHttpClient) => Promise<T>): Prom
 	return await fn(client)
 }
 
-interface ChatResponse {
+type ChatResponse = {
 	conversationId: string
 	role: 'assistant'
 	content: string
 }
 
-interface Message {
+type Message = {
 	_id: string
 	conversationId: string
 	role: 'user' | 'assistant'
@@ -45,10 +45,10 @@ function generateAssistantResponse(message: string): string {
 
 const app = new Elysia()
 
-app.get('/health', () => 'OK')
+app.get('/api/health', () => 'OK')
 
 app.post(
-	'/chat',
+	'/api/chat',
 	async ({ body, set }) => {
 		const { message, conversationId: incomingId } = body
 
@@ -93,7 +93,7 @@ app.post(
 	},
 )
 
-app.get('/messages', async ({ query, set }) => {
+app.get('/api/messages', async ({ query, set }) => {
 	const conversationId = query.conversationId as Id<'conversations'> | undefined
 
 	const result = await withClient(async (client): Promise<Message[]> => {
@@ -107,6 +107,9 @@ app.get('/messages', async ({ query, set }) => {
 	set.headers['content-type'] = 'application/json'
 	return result
 })
+
+// Root health check for direct deployment verification (e.g. curl root).
+app.get('/health', () => 'OK')
 
 // Vercel Bun runtime expects a fetch handler object. When run locally with
 // `bun src/index.ts`, Bun auto-serves this default object on the given port.

@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@types/bun": "latest",
-		"convex": "1.42.2-alpha.0"
+		"convex": "1.42.2"
 	},
 	"peerDependencies": {
 		"react": "^19.2.0",
