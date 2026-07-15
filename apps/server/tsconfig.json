@@ -7,5 +7,5 @@
 		"module": "Preserve",
 		"moduleResolution": "bundler"
 	},
-	"include": ["src"]
+	"include": ["src", "api"]
 }
